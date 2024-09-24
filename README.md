@@ -1,4 +1,4 @@
-# Mama-Demo Application
+# MAMA-Demo Application
 
 This is a simple Java Spring application that uses MongoDB as its database. The application provides a simple member registration form and displays the registered members. The application is built with Spring Boot and uses Spring Data MongoDB to interact with the MongoDB database.
 
