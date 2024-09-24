@@ -27,7 +27,7 @@ This is a simple Java Spring application that uses MongoDB as its database. The 
 
 1. Clone the repository
 ```
-git clone https://github.com/yourusername/mama-demo.git
+git clone git@github.com:ranfysvalle02/mama-demo.git
 ```
 2. Navigate to the project directory
 ```
