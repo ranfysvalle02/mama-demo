@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>kitchensink</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .dualbrand img {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dualbrand">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/JBoss_logo.svg/640px-JBoss_logo.svg.png" width="300" height="175" />
+        </div>
+        <div id="content">
+        <h1>Welcome to JBoss!</h1>
+
+        <div>
+            <p>You have successfully deployed a Jakarta EE Enterprise
+                Application.</p>
+        </div>
+<form id="reg" name="reg" method="post" action="http://api.example.com/register">
+            <h2>Member Registration</h2>
+            <p>Enforces annotation-based constraints defined on the
+                model class.</p><table>
+<tbody>
+<tr>
+<td class="titleCell"><label for="reg:name">Name:</label></td>
+<td><input id="reg:name" type="text" name="name" value="" /></td>
+</tr>
+<tr>
+<td class="titleCell"><label for="reg:email">Email:</label></td>
+<td><input id="reg:email" type="text" name="email" value="" /></td>
+</tr>
+<tr>
+<td class="titleCell"><label for="reg:phoneNumber">Phone #:</label></td>
+<td><input id="reg:phoneNumber" type="text" name="phoneNumber" value="" /></td>
+</tr>
+</tbody>
+</table>
+
+            <p><table>
+<tbody>
+<tr>
+<td><input id="reg:register" type="button" value="Register" class="register btn btn-primary" onclick="registerMember()" /></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+            </p>
+</form>
+        <h2>Members</h2><table class="simpletablestyle table">
+<thead>
+<tr>
+<th scope="col">Id</th>
+<th scope="col">Name</th>
+<th scope="col">Email</th>
+<th scope="col">Phone #</th>
+<th scope="col">REST URL</th>
+</tr>
+</thead>
+<tbody id="members">
+<!-- Placeholder for member data -->
+</tbody>
+</table>
+
+        </div>
+        <div id="aside">
+            <p>Learn more about Red Hat JBoss Enterprise Application Platform.</p>
+            <ul>
+                <li><a href="https://access.redhat.com/documentation/en/red-hat-jboss-enterprise-application-platform/">Documentation</a></li>
+                <li><a href="http://www.redhat.com/en/technologies/jboss-middleware/application-platform">Product Information</a></li>
+            </ul>
+        </div>
+        <div id="footer">
+            <p>
+                This project was generated from a Maven archetype from
+                JBoss.<br />
+            </p>
+        </div>
+    </div>
+    <script>
+		function registerMember() {
+		    const name = document.getElementById('reg:name').value;
+		    const email = document.getElementById('reg:email').value;
+		    const phoneNumber = document.getElementById('reg:phoneNumber').value;
+
+		    const member = { name, email, phoneNumber };
+
+		    fetch('http://localhost:8080/register', {
+		        method: 'POST',
+		        headers: {
+		            'Content-Type': 'application/json'
+		        },
+		        body: JSON.stringify(member)
+		    }).then(response => {
+		        if (response.ok) {
+		            alert('Member registered successfully');
+		            location.reload();
+		        } else {
+		            alert('Failed to register member');
+		        }
+		    });
+		}
+
+		window.onload = function() {
+		    fetch('http://localhost:8080/members')
+		        .then(response => response.json())
+		        .then(data => {
+		            const members = document.getElementById('members');
+		            data.forEach(member => {
+		                const row = document.createElement('tr');
+		                row.innerHTML = `<td>${member.id}</td><td>${member.name}</td><td>${member.email}</td><td>${member.phoneNumber}</td><td><a href='http://localhost:8080/members/${member.id}' target='_blank'>http://localhost:8080/members/${member.id}</a></td>`;
+		                members.appendChild(row);
+		            });
+		        });
+		};
+	</script>
+</body>
+</html>
