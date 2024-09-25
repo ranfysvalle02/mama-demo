@@ -38,8 +38,31 @@ Consider the following factors when choosing between Quarkus and Spring Boot:
 
 Based on these factors, Spring Boot is chosen due to its maturity and higher chance of library/feature compatibility.
 
+### Dependency Management
+
+1. **Identify Dependencies:**
+   * Create a list of all libraries and frameworks used in the JBoss application.
+   * Use tools like `mvn dependency:tree` or IDE features to generate a dependency tree.
+2. **Find Spring Boot Equivalents:**
+   * For each dependency, search for the corresponding Spring Boot equivalent.
+   * Consider factors like compatibility, popularity, and community support.
+   * Use Spring Boot's dependency management system to declare dependencies in your `pom.xml` file.
+3. **Resolve Conflicts:**
+   * If there are conflicts between dependencies, use techniques like version exclusion or dependency management to resolve them.
+   * Leverage Spring Boot's dependency management features to simplify this process.
+
+
 ### Step 4: Start the Migration
 Follow the path to 'Hello World' on the target version using the Spring [quickstart guide](https://spring.io/quickstart). Use the following commands:
+
+### Configuration Management
+
+1. **Analyze Existing Configuration:**
+   * Identify how configuration is currently managed in the JBoss application (e.g., configuration files, environment variables).
+2. **Migrate to Spring Boot Configuration:**
+   * Use Spring Boot's configuration properties or YAML files to store application settings.
+   * Consider using profiles for different environments (e.g., development, production).
+   * Leverage Spring Boot's automatic configuration features for common settings.
 
 - `mvn clean package` to build the application.
 - `mvn spring-boot:run` to run the application.
