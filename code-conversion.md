@@ -15,8 +15,9 @@ Migrate the legacy JBoss application, 'kitchensink', to a more modern platform. 
 The application is currently running on JBoss with Java 11. Before starting the migration, ensure the application can execute successfully.
 
 #### Make sure JBoss is running:
- cd $JBOSS_HOME/bin
-   ./standalone.sh
+```cd $JBOSS_HOME/bin```
+
+```./standalone.sh```
    
 #### Build and Deploy
 Use the following commands to build and deploy the application:
