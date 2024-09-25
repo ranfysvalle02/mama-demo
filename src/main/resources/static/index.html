@@ -31,7 +31,7 @@
             <p>You have successfully deployed a Jakarta EE Enterprise
                 Application.</p>
         </div>
-		<form id="reg" name="reg" method="post" action="http://api.example.com/register">
+		<form id="reg" name="reg">
 		    <h2>Member Registration</h2>
 		    <p>Enforces annotation-based constraints defined on the model class.</p>
 		    <table>
@@ -54,7 +54,7 @@
 		        <table>
 		            <tbody>
 		                <tr>
-		                    <td><input id="reg:register" type="submit" value="Register" class="register btn btn-primary" /></td>
+		                    <td><input id="reg:register" type="button" value="Register" class="register btn btn-primary" onclick="registerMember()" /></td>
 		                    <td></td>
 		                </tr>
 		            </tbody>
