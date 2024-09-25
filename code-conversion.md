@@ -8,8 +8,6 @@ The migration process begins with setting up a basic 'Hello World' application o
 
 Next, the application layers are identified, focusing on the use-case abstraction in the source code. The 'kitchensink' application has a "member registration" feature with REST endpoints for each member, and there is an endpoint that lists all members. These are features which will need to be replicated in the new platform.
 
-During the conversion, it's noted that there is no server-side validation of the data being persisted, which is a technical debt that needs to be addressed. The code is then refactored step by step, ensuring each feature works as expected on the new platform.
-
 ### Step 1: Define the Problem
 Migrate the legacy JBoss application, 'kitchensink', to a more modern platform. The target runtime is the latest stable version of Spring Boot or Quarkus based on Java 21.
 
