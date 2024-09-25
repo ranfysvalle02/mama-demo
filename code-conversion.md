@@ -54,7 +54,7 @@ Grab all code and refactor it step by step.
 Implement MongoDB in the Spring application.
 
 ### Step 8: Clone Website
-Ensure the user experience (UX) is correct.
+Ensure the user experience (UX) is replicated.
 
 ### Step 9: Confirm Functionality
 Confirm that all features work as expected.
