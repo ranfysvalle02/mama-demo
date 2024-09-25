@@ -6,7 +6,7 @@ Once the application's current state is understood and it's confirmed to be runn
 
 The migration process begins with setting up a basic 'Hello World' application on Spring Boot, following the Spring quickstart guide. This helps in understanding the new platform and sets the stage for the actual migration.
 
-Next, the application layers are identified, focusing on the use-case abstraction in the source code. The 'kitchensink' application has a "member registration" feature with REST endpoints for each member, which will need to be replicated in the new platform.
+Next, the application layers are identified, focusing on the use-case abstraction in the source code. The 'kitchensink' application has a "member registration" feature with REST endpoints for each member, and there is an endpoint that lists all members. These are features which will need to be replicated in the new platform.
 
 During the conversion, it's noted that there is no server-side validation of the data being persisted, which is a technical debt that needs to be addressed. The code is then refactored step by step, ensuring each feature works as expected on the new platform.
 
