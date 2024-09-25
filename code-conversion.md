@@ -50,16 +50,12 @@ Identify the use-case abstraction in the source code. The application has a "mem
 ### Step 6: Refactor Code
 Grab all code and refactor it step by step.
 
-### Step 7: Address Data Layer Mismatch (make it modern)
-Source used H2 embedded data layer. (sql == 😔)
-Target uses MongoDB data layer. (mongodb == 😎)
-
-### Step 8: Implement MongoDB
+### Step 7: Implement MongoDB
 Implement MongoDB in the Spring application.
 
-### Step 9: Clone Website
+### Step 8: Clone Website
 Ensure the user experience (UX) is correct.
 
-### Step 10: Confirm Functionality
+### Step 9: Confirm Functionality
 Confirm that all features work as expected.
 
