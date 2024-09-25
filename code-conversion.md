@@ -14,7 +14,7 @@ During the conversion, it's noted that there is no server-side validation of the
 Migrate the legacy JBoss application, 'kitchensink', to a more modern platform. The target runtime is the latest stable version of Spring Boot or Quarkus based on Java 21.
 
 ### Step 2: Understand the Current State
-The application is currently running on JBoss with Java 11. Before starting the migration, ensure the application can execute successfully. The tricky part is dealing with JBoss, specifically jboss-eap-8.0.
+The application is currently running on JBoss with Java 11. Before starting the migration, ensure the application can execute successfully.
 
 #### Build and Deploy
 Use the following commands to build and deploy the application:
