@@ -45,7 +45,7 @@ Follow the path to 'Hello World' on the target version using the Spring [quickst
 - `mvn spring-boot:run` to run the application.
 
 ### Step 5: Identify Application Layers
-Identify the use-case abstraction in the source code. The application has a "member registration" feature with 3 fields: name, email, and phone. There are REST endpoints for each member.
+Identify the use-case abstraction in the source code. The application has a "member registration" feature with 3 fields: name, email, and phone. There are REST endpoints for each member. And there is an endpoint that lists all members. 
 
 ### Step 6: A bit of compromise (tech debt)
 As you begin the conversion, note that there is no server-side validation of the data that is being persisted. This is a technical debt that needs to be addressed in the future.
