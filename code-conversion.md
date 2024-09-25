@@ -1,4 +1,4 @@
-## Task: Migrate 'kitchensink' JBoss Application to Spring Boot or Quarkus
+## Task: Migrate 'kitchensink' JBoss Application to Spring Boot
 
 The task at hand is to migrate the 'kitchensink' application, currently running on JBoss with Java 11, to Spring Boot based on Java 21. Before diving into the migration, it's important to understand the current state of the application. This involves ensuring the application can execute successfully in its current state, with particular attention to handling JBoss, specifically jboss-eap-8.0.
 
