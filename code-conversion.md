@@ -44,26 +44,22 @@ Follow the path to 'Hello World' on the target version using the Spring [quickst
 ### Step 5: Identify Application Layers
 Identify the use-case abstraction in the source code. The application has a "member registration" feature with 3 fields: name, email, and phone. There are REST endpoints for each member.
 
-### Step 6: Address Technical Debt
-As you begin the conversion, note that there is no server-side validation of the data that is being persisted. This is a technical debt that needs to be addressed.
+### Step 6: A bit of compromise (tech debt)
+As you begin the conversion, note that there is no server-side validation of the data that is being persisted. This is a technical debt that needs to be addressed in the future.
 
 ### Step 7: Refactor Code
 Grab all code and refactor it step by step.
 
-### Step 8: Address Data Layer Mismatch
-The original application does not use an embedded database. Consider switching to MongoDB.
+### Step 8: Address Data Layer Mismatch (make it modern)
+Source used H2 embedded data layer. (sql == 😔)
+Target uses MongoDB data layer. (mongodb == 😎)
 
 ### Step 9: Implement MongoDB
 Implement MongoDB in the Spring application.
 
-### Step 10: Clone/Phish Website
+### Step 10: Clone Website
 Ensure the user experience (UX) is correct.
 
 ### Step 11: Confirm Functionality
 Confirm that all features work as expected.
 
-### Step 12: Generate README
-Generate a README file outlining the steps a developer would need to take to build and run the migrated application.
-
-### Optional Stretch Goal
-Modify the application to work against a MongoDB database rather than the existing relational target database.
