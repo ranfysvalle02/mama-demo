@@ -42,7 +42,6 @@ Based on these factors, Spring Boot is chosen due to its maturity and higher cha
 
 1. **Identify Dependencies:**
    * Create a list of all libraries and frameworks used in the JBoss application.
-   * Use tools like `mvn dependency:tree` or IDE features to generate a dependency tree.
 2. **Find Spring Boot Equivalents:**
    * For each dependency, search for the corresponding Spring Boot equivalent.
    * Consider factors like compatibility, popularity, and community support.
