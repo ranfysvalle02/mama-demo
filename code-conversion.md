@@ -47,8 +47,7 @@ Based on these factors, Spring Boot is chosen due to its maturity and higher cha
    * Consider factors like compatibility, popularity, and community support.
    * Use Spring Boot's dependency management system to declare dependencies in your `pom.xml` file.
 3. **Resolve Conflicts:**
-   * If there are conflicts between dependencies, use techniques like version exclusion or dependency management to resolve them.
-   * Leverage Spring Boot's dependency management features to simplify this process.
+   * If there are conflicts between dependencies, resolve them.
 
 
 ### Step 4: Start the Migration
